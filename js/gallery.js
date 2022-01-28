@@ -3,11 +3,11 @@ function projPrev(event, state) {
     let action = event.target.parentNode.getElementsByClassName("centered")[0];
     if (state == "over") {
         tag.style.display = "none"
-        action.style.display = "block"
+        // action.style.display = "block"
     }
     else {
         action.style.display = "none"
-        tag.style.display = "block"
+        // tag.style.display = "block"
     }
 }
 
