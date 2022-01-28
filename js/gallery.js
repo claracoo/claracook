@@ -50,8 +50,7 @@ function openAccordion(event) {
 //   x.addListener(myFunction) // Attach listener function on state changes
 
 function openProj(id) {
-    var x = window.matchMedia("(max-height: 500px)")
-    if (x.matches) for (let proj of document.getElementsByClassName("projHeader")) proj.style.display = "none";
+   for (let proj of document.getElementsByClassName("projHeader")) proj.style.display = "none";
     document.getElementById("allProjects").style.display = "block";
     for (let proj of document.getElementsByClassName("wrap")) {
         proj.parentNode.style.display = "none";
