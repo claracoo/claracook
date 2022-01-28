@@ -36,14 +36,14 @@ let bubbles = `	<br />
         <p>Our app Bubbles breaks the loop of catastrophic thinking by enabling users to distance themselves from the anxiety-causing situation through fictionalization. By putting their feelings and situations into words — almost like having a conversation with a close friend, our app provides an opportunity for people to process the situation from a more cognitively distanced, third-person perspective. </p>
         <p>Bubbles prompts users to engage with their experiences using mad libs — a word prompt game in which the user is given random words to incorporate into their storyline. Using mad libs to reframe the situation in a fun, lighthearted way, we aim to help people shift their focus from catastrophizing the situation and see their experience more clearly. </p>
     </div>
-    <img src="images/bubblesChat.png" alt="chatbot example" style="width: 40%; margin-left: 10%;">
+    <img src="images/bubblesChat.png" alt="chatbot example" style="width: 40%; height: 40%; margin-left: 10%;">
 </div>
 
 <br />
 <h3>How we built it:</h3>
 <div class="badseedRings" style="margin-top: 10px;">
     <p>To accomplish this through the design-side, we used a chatbot system to have a chatbot almost ‘mimic’ a close friend to let the person vent out their true emotions and sort out their thoughts. The chat continues until the person feels like they are organized with their thoughts and then the story gets saved into a section of emotions such as anxiety, anger, etc. The user can scroll through their saved history of emotional discussions to reflect on their past experiences. In order to achieve this through the technical side, we used React-Native and Dialogflow to pick out the essential packages to use in our chatbot system. Inside ReactNative, we used the Gifted Chat UI to tune out details of the design we agreed on. </p>
-    <img src="images/bubblesTools.png" alt="react native and dialogflow symbols" class="agentBadSeed">
+    <img src="images/bubblesTools.png" alt="react native and dialogflow symbols" class="agentBadSeed" style=" width: 30%; height: 30%;">
 </div>
 <br />
 <p>Here is a link to the github repository</p>
@@ -53,7 +53,7 @@ let bubbles = `	<br />
 
 <button class="accordion" onclick="openAccordion(event)">Presenting the App &#9660;</button>
 <div class="panel">
-    <div class="badseedRings" style="margin-top: 50px;">
+    <div class="picking badseedRings" style="margin-top: 50px;">
         <div style="margin-right: 10%;">
             <img src="images/bubblesPresenting.png" alt="4 screens of our app">
         </div>

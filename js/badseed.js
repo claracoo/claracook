@@ -42,9 +42,9 @@ This research was taken and included in larger projects at the beamlines, such a
 
 <button class="accordion" onclick="openAccordion(event)">The Process &#9660;</button>
 <div class="panel">
-<div class="badseedRings" style="margin-top: 50px;">
+<div class=" picking badseedRings" style="margin-top: 50px;">
     <div style="display: flex; flex-direction: column; align-items: center; margin-right: 10%; width: 100%;">
-        <img src="images/badseedBears.png" alt="visualization of reward system">
+        <img src="images/badseedBears.png" alt="visualization of reward system" style="width: 70%">
         <p>Reward System Visualization</p>
     </div>
     <p>The goal is to get an agent (the computer’s decisions) to learn the rules of a particular environment. The environment will reward or penalize the agent for its decisions. For example, one of the requirements for our environment is that we do not want the agent to pick the same sample over and over again. It might look something like this:</p>
@@ -52,7 +52,7 @@ This research was taken and included in larger projects at the beamlines, such a
 
 <br />
 <h3>Picking and Agent:</h3>
-<div class="badseedRings" style="margin-top: 10px;">
+<div class=" picking badseedRings" style="margin-top: 10px;">
     <img src="images/agent.png" alt="graph of different agents' abilities to learn" class="agentBadSeed">
         <p>
             Based on previous experimentation with cartpole and other basic reinforcement learning paradigms, the two agents that seemed most promising were the Advantage Actor Critic Algorithm (A2C) and the Double Deep Q-Learning (DDQN) algorithms. After testing on similar environments to the one described above, A2c seemed like the best choice because it learned faster:</p>

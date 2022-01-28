@@ -102,7 +102,7 @@ let twother = `	<br />
         <h2>The Third Party Website (Twother):</h2>
         <p>After seeing the possible echo chambers that might be on their own feed, we wanted users to have a chance to explore what other echo chambers might be out there. Here, we are giving a user to see through the eyes of people who are apart of various echo chambers, to see the (tw)other perspective.</p>
         <p>Users can select multiple echo chambers at a time to see similarities to their own feed, such as in the prototype shown below.</p>
-        <img src="images/thirdParty.png" alt="Twother Protottype" >
+        <img src="images/thirdParty.png" alt="Twother Protottype" style="width: 60%; height: 60%; margin-left: 20%" >
         <br />
         <br />
         <h3>Implications:</h3>

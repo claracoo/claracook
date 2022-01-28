@@ -37,7 +37,21 @@ function openAccordion(event) {
     }
 }
 
+// function myFunction(x) {
+//     if (x.matches) { // If media query matches
+//       document.body.style.backgroundColor = "yellow";
+//     } else {
+//      document.body.style.backgroundColor = "pink";
+//     }
+//   }
+  
+//   var x = window.matchMedia("(max-width: 700px)")
+//   myFunction(x) // Call listener function at run time
+//   x.addListener(myFunction) // Attach listener function on state changes
+
 function openProj(id) {
+    var x = window.matchMedia("(max-height: 500px)")
+    if (x.matches) for (let proj of document.getElementsByClassName("projHeader")) proj.style.display = "none";
     document.getElementById("allProjects").style.display = "block";
     for (let proj of document.getElementsByClassName("wrap")) {
         proj.parentNode.style.display = "none";
@@ -61,8 +75,11 @@ function openProj(id) {
 }
 
 function openAll() {
-    document.getElementsByClassName("projectsPreview")[0].innerHTML = original;
+    let projects = document.getElementsByClassName("projectsPreview")[0];
+    projects.innerHTML = original;
     document.getElementById("allProjects").style.display = "none";
+    for (let proj of document.getElementsByClassName("projHeader")) proj.style.display = "block";
+    
 }
 
 // var carousel = document.getElementById('carousel');

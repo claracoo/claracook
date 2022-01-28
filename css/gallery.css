@@ -121,3 +121,13 @@
       }
       
   }
+
+  @media screen and (max-height: 500px) {
+    .wrap {
+      width: 60%;
+    }
+
+    .projectsPreview {
+      margin-bottom: 10px;
+    }
+  }

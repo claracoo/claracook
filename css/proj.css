@@ -129,6 +129,10 @@
     width: 40%;
     margin-right: 10%;
 }
+
+.extra {
+  height: 100px;
+}
   
 @media screen and (max-width: 550px) {
   .grid-container {
@@ -160,4 +164,25 @@
     .agentBadSeed {
         width: 100%;
     }
+}
+
+@media screen and (max-height: 500px) {
+  .badseedRings {
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  /* .agentBadSeed {
+    width: 40%;
+    height: 40%;
+  } */
+   .picking {
+     display: flex;
+     flex-direction: column;
+   }
+
+   .extra {
+     height: 10px;
+   }
 }
