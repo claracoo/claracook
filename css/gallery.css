@@ -1,0 +1,123 @@
+  .carouselBody {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      /* height: 200px; */
+
+  }
+
+  #allProjects {
+      display: none;
+  }
+
+  .projectsPreview {
+      /* margin-top: 100px; */
+      display: flex;
+      align-content: center;
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+
+  .projDesc {
+      width: 80%;
+      margin-left: 10%;
+  }
+
+  .top-right {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    border-radius: 4px;
+    padding: 3px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  #tech {
+      background-color: rgb(63, 63, 189);
+  }
+
+  #humanTech {
+    background-color: rgb(63, 113, 189);
+  }
+
+  #human {
+    background-color: rgb(63, 149, 189);
+  }
+
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #badseedWrap {
+    width: 333vw;
+  }
+  
+  #bubblesWrap {
+    width: 333vw;
+  }
+  
+  #twotherWrap {
+    width: 333vw;
+  }
+  
+  .t1 {
+    background: rgb(51, 51, 58);
+    position: relative;
+    text-align: center;
+  }
+  
+  .projImg {
+    display: block;
+    transition: opacity .3s linear;
+  }
+
+  
+  .projImg:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 60em) {
+      .projectsPreview {
+          flex-direction: column;
+      }
+
+      .projDesc {
+          width: 70%;
+          margin-left: 15%;
+      }
+      #badseedWrap {
+        width: 100%;
+      }
+      
+      #bubblesWrap {
+        width: 100%;
+      }
+      
+      #twotherWrap {
+        width: 100%;
+        margin-bottom: 100px;
+      }
+      .centered {
+          display: none;
+      }
+      
+  }

@@ -1,0 +1,163 @@
+.projSpecificHeader {
+    display: flex;
+}
+
+.projSpecificBadseedimg {
+    width: 40%;
+    height: 40%;
+}
+
+.projSpecificDesc {
+    margin-left: 10%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  
+  .grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 20px;
+    /* font-size: 20px; */
+    /* font-family: sans-serif; */
+  }
+  
+  .title {
+      text-align: right;
+      font-weight: bold;
+  }
+
+  .deepdive {
+      margin-bottom: 100px;
+  }
+
+  .grid-container-interviews {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+  
+  .grid-item-interviews {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .title-interviews {
+      font-weight: bold;
+      font-size: 80px;
+      text-align: right;
+      padding: 10px;
+      margin-top: 10px;
+  }
+  
+  .interview {
+      margin-bottom: 0px;
+    margin-top: 37px;
+  }
+  
+  .explanation {
+      color: grey;
+      margin-top: 0px;
+      font-size: 12px;
+      margin-left: 1%
+  }
+
+  .flex {
+	display: flex;
+    justify-content: center;
+}
+
+.grid-container-insights {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  width: 60%;
+}
+
+.grid-item-insights {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 20px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.title-insights {
+	text-align: right;
+    font-weight: bold;
+    font-size: 40px;
+    color: #D28944;
+}
+
+
+  .accordion {
+    background-color: #2a2b30;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-bottom: solid lightgray;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+    color: black;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    /* background-color: white; */
+    overflow: hidden;
+  }
+
+  .badseedRings {
+      display: flex;
+  }
+
+  .agentBadSeed {
+    width: 40%;
+    margin-right: 10%;
+}
+  
+@media screen and (max-width: 550px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+  }
+  
+  .title {
+      text-align: left;
+      }
+  }
+
+@media screen and (max-width: 60em) {
+    .projSpecificHeader {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projSpecificBadseedimg {
+        width: 60%;
+        height: 60%;
+    }
+
+    .badseedRings {
+        flex-direction: column;
+    }
+
+    .agentBadSeed {
+        width: 100%;
+    }
+}
