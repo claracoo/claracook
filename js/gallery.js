@@ -6,8 +6,8 @@ function projPrev(event, state) {
         // action.style.display = "block"
     }
     else {
-        action.style.display = "none"
-        // tag.style.display = "block"
+        // action.style.display = "none"
+        tag.style.display = "block"
     }
 }
 
