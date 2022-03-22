@@ -1,14 +1,15 @@
 function projPrev(event, state) {
-    let tag = event.target.parentNode.getElementsByClassName("top-right")[0];
-    let action = event.target.parentNode.getElementsByClassName("centered")[0];
-    if (state == "over") {
-        tag.style.display = "none"
-        // action.style.display = "block"
-    }
-    else {
-        // action.style.display = "none"
-        tag.style.display = "block"
-    }
+    // let tag = event.target.parentNode.getElementsByClassName("top-right")[0];
+    // let action = event.target.parentNode.getElementsByClassName("centered")[0];
+    // if (state == "over") {
+    //     tag.style.display = "none"
+    //     // action.style.display = "block"
+    // }
+    // else {
+    //     // action.style.display = "none"
+    //     tag.style.display = "block"
+    // }
+    console.log("here")
 }
 
 // var acc = document.getElementsByClassName("accordion");

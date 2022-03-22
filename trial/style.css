@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    height: 1000px;
+  }
+  header{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+    background-color: #333;
+  }
+
+  main {
+      display: flex;
+
+  }
+
+  a:visited, a:active {
+      text-decoration: none;
+  }
+
+  .header-inner{
+    width: 90%;
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+  }
+  .logo{
+    color: #fff;
+    cursor: default;
+  }
+  .logo span{
+    color: rgb(108, 170, 124);
+  }
+  .bars{
+    font-size: 26px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+    transition: color 0.6s ease;
+  }
+  .bars:hover{
+    color:  rgb(108, 170, 124);
+  }
+  .nav-link, .nav-link:visited{
+    margin-left: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.6s ease;
+  }
+  .nav-link:hover{
+    color:  rgb(108, 170, 124);
+    text-decoration: none;
+  }
+
+  .mobile-menu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #222;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    pointer-events: none;
+  }
+  #my_dataviz {
+    position: relative;
+    top: 100px;
+    /* left: -200px; */
+    width: 100%;
+    height: 100%;
+}
+
+
+.myCircle:hover {
+    stroke: black;
+  }
+
+  .intro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333333;
+    width: 360px;
+  }
+
+  .myName {
+      font-size: 60px;
+      font-weight: 500;
+      /* padding-bottom: 10px; */
+  }
+
+  .shortcuts {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 10px;
+  }
+
+  .shortcut {
+      width: 150px;
+      background-color: #333333;
+      color: white;
+      text-align: center;
+      padding: 15px 7px;
+  }
+
+  .shortcut:hover {
+      cursor: pointer;
+      background-color: white;
+      color: #333333;
+      font-size: larger;
+      border: 1px solid #333333;
+      text-decoration: none;
+  }
+
+  .about {
+      display: flex;
+  }
+
+  .poster {
+	max-width: 100%;
+	max-height: 80%;
+	border-radius: 10%;
+	width: 50%;
+	height: 50%;
+}
+
+  .aboutIntro {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin: 200px 100px;
+  }
+
+  .left {
+      width: 50%;
+      margin-right: 5%;
+  }
+
+  @media screen and (max-width: 768px){
+    .bars{
+      display: block;
+    }
+    
+    .nav-menu{
+      display: none;
+    }
+    
+    .active{
+    left: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: left 0.6s ease-in-out;
+    }
+    
+    .nav-link{
+      font-size: 24px;
+      margin: 30px 0;
+    }
+
+    #my_dataviz {
+        left: 0px;
+    }
+    .aboutIntro {
+        flex-direction: column-reverse;
+    }
+
+    .poster {
+        margin-bottom: 30px;
+    }
+
+  }

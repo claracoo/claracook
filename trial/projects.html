@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="projects.css" />
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+    </head>
+    <body>
+            <!-- Navbar-->
+            <header>
+              <div class="header-inner">
+                <h2 class="logo">Clara<span>Cook</span></h2>
+                <i id="bars" class="fa fa-bars bars"></i>
+                <nav class="nav-menu">
+                  <a href="./index.html" class="nav-link">Home</a>
+                  <a href="./about.html" class="nav-link">About</a>
+                  <a href="./projects.html" class="nav-link">Projects</a>
+                  <a href="#" class="nav-link">Contact</a>
+                </nav>
+              </div>
+            </header>
+            <nav id="mobileMenu" class="mobile-menu">
+              <a href="./index.html" class="nav-link">Home</a>
+              <a href="./about.html" class="nav-link">About</a>
+              <a href="./projects.html" class="nav-link">Projects</a>
+              <a href="#" class="nav-link">Contact</a>
+            </nav>
+      <main>
+          <div class="projectsIntro">
+          <h1>Projects</h1>
+          <p>Let me take you on my journey. Coming from a mixed background of cognitive and computer science, I started by delving into my technical acumen in the project, Bad Seed. From there, I started to incorporate my background knowledge from cognitive science in the project, Bubbles. Finally, in the last project, I have become a pro at seamlessly integrating my two pronged approach to HCI in my Bloomberg Capstone Project.</p>
+        </div> 
+        <div class="timelineProjs">
+        <div>
+            <img class="horizProjImg" src="../images/horizProjects.png" alt="timeline" />
+            
+        </div>
+          <div class="projectsList">
+              <a class="project">
+                <div class="containerProj projImg">
+                <img class="image" id="badseed" src="../images/brookhaven.png" alt="Beamline sideshot" />
+
+                </div>
+                <h3>Bad Seed</h3>
+				<p>Bad Seed is an artificial intelligence based autonomous scheduler used at Brookhaven National Laboratory (BNL) in the National Synchrotron Lightsource II. As with the majority of technology used at BNL, there is no such thing as “optimized enough”. The only thing holding back science is time and resources, so, by working on this project, I hoped to mitigate some of those limitations.</p>
+              </a>
+              <a class="project">
+                <div class="containerProj projImg">
+                  <img class="image" id="bubbles" src="../images/bubbles.png" alt="Bubbles Logo" />
+                </div>
+                  <h3>Bubbles</h3>
+                  <p>Do you feel your anxiety bubbling to the surface? Do you tend to catastrophize and think of the worst-case scenario? You are not alone. Try Bubbles, a self-help mobile application that lets you express your emotions freely and supports your mental wellbeing. Bubbles is here as a virtual friend to listen, be a part of your struggles and help you take a step back and put your situation into perspective.</p>           
+                </a>
+              <a class="project">
+                <div class="containerProj projImg">
+                <img class="image" id="burgh" src="../images/burgh.png" alt="Bloomberg x CMU Logo" />
+                </div>
+                <h3>Bloomberg Capstone</h3>
+                <p>To finish my masters degree, I am part of an ongoing capstone project with Bloomberg, in which we are looking at the ML models that drive their main product, the Terminal. Through copious research and design, we are working towards building an interface that will help detect errors and speed up the remediation process. I am excited to update you throughout the project!</p>
+              </a>
+          </div>
+        </div> 
+      </main>
+        
+      <script src="main.js"></script>
+    </body>
+</html>
