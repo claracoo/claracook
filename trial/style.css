@@ -140,8 +140,8 @@
 	max-width: 100%;
 	max-height: 80%;
 	border-radius: 10%;
-	width: 50%;
-	height: 50%;
+	width: 25%;
+	height: 25%;
 }
 
   .aboutIntro {
@@ -183,10 +183,33 @@
     }
     .aboutIntro {
         flex-direction: column-reverse;
+        align-items: center;
+        margin-left: 0px;
+    }
+
+    .left {
+        margin-right: 0px;
     }
 
     .poster {
         margin-bottom: 30px;
+        width: 40%;
+	height: 40%;
     }
 
+  }
+
+  @media screen and (max-height: 525px){
+    .mobile-menu {
+        margin-top: 100px;
+        overflow: scroll;
+    }
+
+    .myName {
+        font-size: 30px;
+    }
+
+    .intro {
+        margin-top: 50px;
+    }
   }
