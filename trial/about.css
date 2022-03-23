@@ -67,6 +67,17 @@
     background-color: #666;
     color: white;
   }
+  
+  @media only screen and (min-width: 1175px){
+    .column img {
+        height: 250px;
+      }
+  }
+  @media only screen and (min-width: 1410px){
+    .column img {
+        height: 300px;
+      }
+  }
 
   @media only screen and (max-width: 768px){
     .column {
