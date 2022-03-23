@@ -5,6 +5,10 @@ bars.addEventListener('click', function() {
 })
 
 
+// $("column img").mouseover(function() {
+//   console.log()
+// })
+
 // function projPrev(event, state) {
 //   let tag = event.target.parentNode.getElementsByClassName("top-right")[0];
 //   let action = event.target.parentNode.getElementsByClassName("centered")[0];
