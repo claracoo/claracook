@@ -192,7 +192,7 @@
     }
 
     .twoCenters img {
-        width: 50%;
+        width: 80%;
     }
 
     .oneCentre {
@@ -218,6 +218,22 @@
 @media only screen and (max-width: 550px){
     .projLinks {
         width: 80%;
+     }
+
+     img {
+         max-width: 300px;
+     }
+
+     .callout {
+         padding: 10px
+     }
+
+     .projMain {
+         padding: 50px 20px;
+     }
+
+     .standalonePic img {
+        padding: 10px;
      }
   }
 
