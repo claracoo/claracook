@@ -105,5 +105,9 @@
     .mobileProj {
         display: flex;
     }
+
+    main {
+        margin: 150px 20px
+    }
    
   }
