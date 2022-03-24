@@ -26,15 +26,15 @@ d3.csv("/map.csv",
   // Now I can use this dataset:
   function() {
     var data = [
-        {date: 2020-06-15, value: 2, name: "", stroke_color: "black", fill_color: "black", radius: 0}, 
-        {date: 2020-06-13, value: 4, name: "", stroke_color: "black", fill_color: "black", radius: 0}, 
-        {date: 2020-06-12, value: -1, name: "Bad Seed", stroke_color: "#6caa7c", fill_color: "#6caa7c", radius: 10}, 
-        {date: 2020-06-09, value: 5, name: "Bubbles", stroke_color: "#6caa7c", fill_color: "#6caa7c", radius: 10}, 
-        {date: 2020-06-07, value: 0, name: "", stroke_color: "black", fill_color: "black", radius: 0}, 
-        {date: 2020-06-06, value: 4, name: "Bloomberg Capstone", stroke_color: "#6caa7c", fill_color: "#6caa7c", radius: 10}, 
-        {date: 2020-06-04, value: 1, name: "", stroke_color: "black", fill_color: "black", radius: 0}, 
-        {date: 2020-06-02, value: 5, name: "", stroke_color: "black", fill_color: "black", radius: 0}, 
-        {date: 2020-06-01, value: 8, name: "", stroke_color: "black", fill_color: "black", radius: 0}
+        {date: 2020-06-15, value: 2, name: "", stroke_color: "black", fill_color: "black", radius: 0, href: ""}, 
+        {date: 2020-06-13, value: 4, name: "", stroke_color: "black", fill_color: "black", radius: 0, href: ""}, 
+        {date: 2020-06-12, value: -1, name: "Bad Seed", stroke_color: "#6caa7c", fill_color: "#6caa7c", radius: 10, href: "badseed.html"}, 
+        {date: 2020-06-09, value: 5, name: "Bubbles", stroke_color: "#6caa7c", fill_color: "#6caa7c", radius: 10, href: "bubbles.html"}, 
+        {date: 2020-06-07, value: 0, name: "", stroke_color: "black", fill_color: "black", radius: 0, href: ""}, 
+        {date: 2020-06-06, value: 4, name: "Bloomberg Capstone", stroke_color: "#6caa7c", fill_color: "#6caa7c", radius: 10, href: "bloomberg.html"}, 
+        {date: 2020-06-04, value: 1, name: "", stroke_color: "black", fill_color: "black", radius: 0, href: ""}, 
+        {date: 2020-06-02, value: 5, name: "", stroke_color: "black", fill_color: "black", radius: 0, href: ""}, 
+        {date: 2020-06-01, value: 8, name: "", stroke_color: "black", fill_color: "black", radius: 0, href: ""}
 
     ]
     // Add X axis --> it is a date format
@@ -91,7 +91,7 @@ d3.csv("/map.csv",
           .style("opacity", 0)
       }
  var click = function(d) {
-console.log("yo")
+  window.location = d.href
 }
 
     // Add the points

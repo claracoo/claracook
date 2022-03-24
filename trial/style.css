@@ -3,9 +3,9 @@
     margin: 0;
     box-sizing: border-box;
   }
-  body{
+  /* body{
     height: 1000px;
-  }
+  } */
   header{
     position: fixed;
     top: 0;
@@ -83,6 +83,7 @@
     /* left: -200px; */
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 

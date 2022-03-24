@@ -1,0 +1,228 @@
+.progresBar {
+    width: 100%;
+    margin-top: 150px;
+}
+
+.progresBarImg {
+    width: 100%;
+}
+
+.projName {
+    margin: 20px;
+}
+
+.projHeader {
+    padding: 30px;
+    display: flex;
+}
+
+.projInfo p {
+    margin-bottom: 30px;
+}
+
+.projLinks {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.projLinks a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+
+.projLinks a:hover {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+
+.projMain {
+    padding: 50px 100px;
+}
+
+.imgSplit {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.img {
+    width: 100%;
+}
+
+.img img {
+    width: 100%;
+}
+
+.splitParas {
+    margin-right: 5%;
+}
+
+#doubleSplit {
+    width: 80%;
+    display: flex;
+}
+
+.doubleImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.callout {
+    text-align: center;
+    padding: 50px;
+}
+
+.standalonePic {
+    width: 100%;
+}
+
+.standalonePic img {
+    width: 100%;
+    padding: 50px;
+}
+
+#cartPole {
+    width: 50%;
+}
+
+.leftImg {
+    width: 100%;
+    margin-right: 5%;
+}
+
+.leftImg img {
+    width: 100%;
+}
+
+.twoCenters {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.oneCentre {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+}
+
+.oneCentre img {
+    width: 100%;
+}
+
+.imbalanced {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.imbalanced img {
+    width: 80%;
+}
+
+.imText {
+    font-weight: bold;
+}
+
+.next {
+    border: 1px solid black;
+    color: black;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+    position: fixed;
+    right:    0;
+    bottom:   0;
+}
+
+.next:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1325px){
+    .projLinks {
+       width: 60%;
+    }
+  }
+@media only screen and (max-width: 1050px){
+    .projLinks {
+       width: 80%;
+    }
+  }
+@media only screen and (max-width: 925px){
+    .projLinks {
+       width: 100%;
+    }
+
+    .projLinks a {
+        padding: 10px 10px;
+    }
+  }
+@media only screen and (max-width: 768px){
+    .projHeader {
+       flex-direction: column;
+    }
+
+    .projLinks {
+        width: 50%;
+     }
+
+     .imgSplit {
+        flex-direction: column;
+    }
+
+    #doubleSplit {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .twoCenters {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .twoCenters img {
+        width: 50%;
+    }
+
+    .oneCentre {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .imbalanced {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50px;
+    }
+
+    .imbalanced img {
+        width: 100%;
+    }
+
+    .imbalanced p {
+        margin-left: 15px;
+    }
+  }
+  
+@media only screen and (max-width: 550px){
+    .projLinks {
+        width: 80%;
+     }
+  }
+
+@media only screen and (max-width: 400px){
+    .projLinks {
+        width: 100%;
+     }
+  }

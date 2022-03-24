@@ -92,8 +92,8 @@
         align-items: center;
     }
 
-    .project {
-        width: 70%;
+    .project p {
+        padding-bottom: 50px;
     }
 
     /* .vertProjImg {
