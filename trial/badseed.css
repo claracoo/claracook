@@ -1,19 +1,45 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .progresBar {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .progresBarImg {
     width: 100%;
 }
 
+.bigHeader {
+    border: 1px solid lightgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 50px;
+    margin-top: 150px;
+    background-color: white;
+    border-radius: 16px;
+    max-width: 1200px;
+}
+
 .projName {
     margin: 20px;
+    margin-bottom: 0px;
 }
 
 .projHeader {
     padding: 30px;
     display: flex;
+}
+
+.subheader {
+    color: rgb(108, 170, 124);
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
 }
 
 .projInfo p {
@@ -22,7 +48,7 @@
 
 .projLinks {
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-around;
 }
 
@@ -41,6 +67,7 @@
 
 .projMain {
     padding: 50px 100px;
+    width: 95%;
 }
 
 .imgSplit {
@@ -50,6 +77,14 @@
 
 .img {
     width: 100%;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid lightgray;
+    padding: 15px;
+    display:flex;
+    align-items: center;
+
 }
 
 .img img {
@@ -58,6 +93,14 @@
 
 .splitParas {
     margin-right: 5%;
+}
+
+.splitParas p {
+    max-width: 80ch;
+}
+
+.splitParas ol {
+    margin-left: 30px;
 }
 
 #doubleSplit {
@@ -88,6 +131,11 @@
 
 #cartPole {
     width: 50%;
+}
+
+.centerText {
+    width: 50%;
+    max-width: 80ch;
 }
 
 .leftImg {
@@ -154,15 +202,24 @@
        width: 60%;
     }
   }
-@media only screen and (max-width: 1050px){
+@media only screen and (max-width: 1130px){
     .projLinks {
-       width: 80%;
+       width: 70%;
     }
   }
-@media only screen and (max-width: 925px){
+@media only screen and (max-width: 1050px){
     .projLinks {
        width: 100%;
     }
+  }
+@media only screen and (max-width: 940px){
+    .projHeader {
+        flex-direction: column;
+     }
+ 
+     .projLinks {
+         width: 50%;
+      }
 
     .projLinks a {
         padding: 10px 10px;
@@ -228,6 +285,12 @@
          padding: 10px
      }
 
+     #small {
+         padding: 0px;
+         width: 50%;
+         background-color: red;
+     }
+
      .projMain {
          padding: 50px 20px;
      }
@@ -237,8 +300,12 @@
      }
   }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 450px){
     .projLinks {
         width: 100%;
+     }
+
+     .projHeader {
+         align-items: center;
      }
   }

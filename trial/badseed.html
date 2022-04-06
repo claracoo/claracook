@@ -42,11 +42,13 @@
         <a href="./about.html" class="nav-link">About</a>
         <a href="./projects.html" class="nav-link">Projects</a>
       </nav>
-      <div>
+      <div class="body">
+        <div class="bigHeader">
           <div class="progresBar">
                 <img src="../images/BadSeedProgress.png" class="progresBarImg"/>
             </div>
             <h1 class="projName">Bad Seed</h1>
+            <h3 class="subheader">Reinforcement Learning &middot; NSF Researcher and Programmer &middot; 2020</h3>
             <div class="projHeader">
                 <div class="projInfo">
                     <h4>The Problem</h4>
@@ -66,11 +68,12 @@
                     <img src="./badSeedImgs/BadSeedTitle.png"/>
                 </div>
             </div>
+        </div>
             <div class="projMain">
                 <h3>The Context</h3>
-                <p>Bad Seed is an artificial intelligence based autonomous scheduler used at Brookhaven National Laboratory (BNL) in the National Synchrotron Lightsource II. As with the majority of technology used at BNL, there is no such thing as “optimized enough”. The only thing holding back science is time and resources, so, by working on this project, I hoped to mitigate some of those limitations.</p>
                 <div class="imgSplit">
                     <div class="splitParas">
+                         <p>Bad Seed is an artificial intelligence based autonomous scheduler used at Brookhaven National Laboratory (BNL) in the National Synchrotron Lightsource II. As with the majority of technology used at BNL, there is no such thing as “optimized enough”. The only thing holding back science is time and resources, so, by working on this project, I hoped to mitigate some of those limitations.</p>
                         <p>I started by trying to better understand the problem. Beamline science is very niche, and it meant that I did a lot of research to understand the domain in which I was working. </p>
                         <p>On a high level, I was looking at the circle scattering pattern that happens when the beam (a bunch of focused electrons) shines through a sample. And those scattering patterns serve as data points that supports the beamline scientists in their research. </p>
                     </div>
@@ -99,19 +102,19 @@
                     <h2>Measure every sample <span style="color: #008D52;">100</span> times.</h2>
                 </div>
                 <h3>The Process</h3>
-                <p>Before I came on the project, the head researchers figured out an important abstraction. The goal was to train an algorithm to do better than the current remeasuring practice. The hard part was not the data, but rather the research and development of the algorithm. For this reason, they abstracted the data down to individual numbers, each representing an aspect of the scattering data. This is where I came in! Now that the data was more malleable, the hard part began, and the algorithm could start to be invented.</p>
                 <div class="imgSplit">
                     <div class="splitParas">
+                        <p>Before I came on the project, the head researchers figured out an important abstraction. The goal was to train an algorithm to do better than the current remeasuring practice. The hard part was not the data, but rather the research and development of the algorithm. For this reason, they abstracted the data down to individual numbers, each representing an aspect of the scattering data. This is where I came in! Now that the data was more malleable, the hard part began, and the algorithm could start to be invented.</p>
                         <p>In this machine learning context, we realized that as this idea of choosing samples was inherently a set of states and potential actions, it was a clear candidate for reinforcement learning (RL). The problem with that? Well, I had never used any RL algorithms, let alone built my own. So, my process begun alongside other reinforcement learning newbies, and we struggled together to learn about the many algorithms commonly used and the agents employed.</p>
                         <p>To test out what we had learned, each person in this 5 person study team saw who could best teach a computer to play Pong. I won! It was a powerful experience because I now had enough background to not only use RL algorithms but to manipulate them enough in the simplied domain.</p>
+                        <p>The next piece of the puzzle was figuring out what the algorithm would entail. The algorithm in RL has two important parts, the agent (the thing making the decisions) and the environment (the constraints on what the decision maker can do). For this reason, my first big system design decision had already come to the forefront.</p>
                     </div>
-                    <div>
+                    <div class="img">
                         <img src="./badSeedImgs/PongSlide.png" />
                     </div>
                 </div>
-                <p>The next piece of the puzzle was figuring out what the algorithm would entail. The algorithm in RL has two important parts, the agent (the thing making the decisions) and the environment (the constraints on what the decision maker can do). For this reason, my first big system design decision had already come to the forefront.</p>
                 <h2 class="callout">What agent should I use?</h2>
-                <p>This is why I was glad I had been a part of that RL study team. I knew exactly what research I needed to do in order to make this decision. I poured into the literature on RL, looking for similar cases to my own problem, and I found the similar case of the “k-armed bandit”. The study talked about the idea that an algorithm could learn which slot machines would be the best to try and when. The big parameter would be how many you are allowed to try at the same time. This paralleled my problem because it is the idea of trying out different entities with variable success.</p>
+                <p id="small">This is why I was glad I had been a part of that RL study team. I knew exactly what research I needed to do in order to make this decision. I poured into the literature on RL, looking for similar cases to my own problem, and I found the similar case of the “k-armed bandit”. The study talked about the idea that an algorithm could learn which slot machines would be the best to try and when. The big parameter would be how many you are allowed to try at the same time. This paralleled my problem because it is the idea of trying out different entities with variable success.</p>
                 <div class="standalonePic">
                     <img src="./badSeedImgs/bandit.png" />
                 </div>
@@ -211,7 +214,7 @@
                     <p style="margin-bottom: 50px;">This project was an amazing learning opportunity for me. It is truly what began my journey to realizing that research and development can and should be integrated. I learned about RL as well as how to include humans in the process. I am so grateful for my time on this project, and I am excited to see more work that comes from it.</p>
                 </div>
             </div>
-            <a class="next">Go to Bubbles Project &#8594;</a>
+            <a href="bubbles.html" class="next">Go to Bubbles Project &#8594;</a>
       </div>
       
         
