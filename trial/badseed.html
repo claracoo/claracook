@@ -42,7 +42,7 @@
         <a href="./about.html" class="nav-link">About</a>
         <a href="./projects.html" class="nav-link">Projects</a>
       </nav>
-      <div class="body">
+      <div class="body centered">
         <div class="bigHeader">
           <div class="progresBar">
                 <img src="../images/BadSeedProgress.png" class="progresBarImg"/>
@@ -70,26 +70,29 @@
             </div>
         </div>
             <div class="projMain">
+                <div class="centered">
                 <h3>The Context</h3>
                 <p class="smallSection">Bad Seed is an artificial intelligence based autonomous scheduler used at Brookhaven National Laboratory (BNL) in the National Synchrotron Lightsource II. As with the majority of technology used at BNL, there is no such thing as “optimized enough”. The only thing holding back science is time and resources, so, by working on this project, I hoped to mitigate some of those limitations.</p>
+            </div>
                 <br />
-                <div class="imgSplit">
-                    <div class="splitParas">
+                <br />
+                <br />
+                <div class="grid-cards">
+                    <div class="grid-card">
                         <p>I started by trying to better understand the problem. Beamline science is very niche, and it meant that I did a lot of research to understand the domain in which I was working. </p>
                         <p>On a high level, I was looking at the circle scattering pattern that happens when the beam (a bunch of focused electrons) shines through a sample. And those scattering patterns serve as data points that supports the beamline scientists in their research. </p>
                     </div>
-                    <div class="img">
+                    <div class="grid-card img">
                         <img src="badSeedImgs/beamlineScatter.gif" />
                         <p>How beams work for Diffraction Patterns</p>
                     </div>
-                </div>
-                <div class="imgSplit">
-                    <div class="splitParas">
+                    <div class="grid-card">
                         <p>Problem is that some of those data points are accurate, clear, and useful, meaning the scatterng patterns have very clear rings, like in the first image here. Others are not as clear and useful, meaning that instance will have to be remeasured.</p>
                         <p>But how do we know which samples need remeasuring? Well... the beamline scientist has to take precious time out of their day to check each and every sample.</p>
                     </div>
-                    <div class="imgSplit" id="doubleSplit">
-                        <div class="img doubleImg">
+                    <div class="grid-card">
+                        <div class="rings">
+                        <div class="img doubleImg" style="margin-right: 5%;">
                             <img src="badSeedImgs/clearSample.png" />
                             <p>Clear Sample</p>
                         </div>
@@ -98,65 +101,73 @@
                             <p>Unclear Sample</p>
                         </div>
                     </div>
+                    </div>
+
                 </div>
                 <div class="callout">
                     <h2>So... what was the original soultion???</h2>
                     <h2>Measure every sample <span style="color: #008D52;">100</span> times.</h2>
                 </div>
+                <div class="centered">
                 <h3>The Process</h3>
                 <p class="smallSection">Before I came on the project, the head researchers figured out an important abstraction. The goal was to train an algorithm to do better than the current remeasuring practice. The hard part was not the data, but rather the research and development of the algorithm. For this reason, they abstracted the data down to individual numbers, each representing an aspect of the scattering data. This is where I came in! Now that the data was more malleable, the hard part began, and the algorithm could start to be invented.</p>
+                </div>
                 <br/>
-                <div class="imgSplit">
-                    <div class="splitParas">
+                <br/>
+                <br/>
+                <div class="grid-cards">
+                    <div class="grid-card">
                         <p>In this machine learning context, we realized that as this idea of choosing samples was inherently a set of states and potential actions, it was a clear candidate for reinforcement learning (RL). The problem with that? Well, I had never used any RL algorithms, let alone built my own. So, my process begun alongside other reinforcement learning newbies, and we struggled together to learn about the many algorithms commonly used and the agents employed.</p>
                         <p>To test out what we had learned, each person in this 5 person study team saw who could best teach a computer to play Pong. I won! It was a powerful experience because I now had enough background to not only use RL algorithms but to manipulate them enough in the simplied domain.</p>
                     </div>
-                    <div class="img">
+                    <div class=" grid-card img">
                         <img src="./badSeedImgs/PongSlide.png" />
                         <p>Creating My own Agent</p>
                     </div>
                 </div>
                 <br />
+                <div class="centered">
                 <p class="smallSection">The next piece of the puzzle was figuring out what the algorithm would entail. The algorithm in RL has two important parts, the agent (the thing making the decisions) and the environment (the constraints on what the decision maker can do). For this reason, my first big system design decision had already come to the forefront.</p>
+            </div>
                 <h2 class="callout">What agent should I use?</h2>
-                <div class="imgSplit">
-                    <div class="splitParas">
-                    <p class="splitParas">This is why I was glad I had been a part of that RL study team. I knew exactly what research I needed to do in order to make this decision. I poured into the literature on RL, looking for similar cases to my own problem, and I found the similar case of the “k-armed bandit”. The study talked about the idea that an algorithm could learn which slot machines would be the best to try and when. The big parameter would be how many you are allowed to try at the same time. This paralleled my problem because it is the idea of trying out different entities with variable success.</p>
-                </div>
+                <div class="centered">
+                    <p class="smallSection">This is why I was glad I had been a part of that RL study team. I knew exactly what research I needed to do in order to make this decision. I poured into the literature on RL, looking for similar cases to my own problem, and I found the similar case of the “k-armed bandit”. The study talked about the idea that an algorithm could learn which slot machines would be the best to try and when. The big parameter would be how many you are allowed to try at the same time. This paralleled my problem because it is the idea of trying out different entities with variable success.</p>
+                    <br />
                     <div class="img">
                         <img src="./badSeedImgs/bandit.png" alt="">
                     </div>
                 </div>
-                <div class="imgSplit">
-                    <div class="splitParas">
-                    <p class="splitParas">This article described that they used an actor critic model (A2C), but a lot of the other literature I saw used a deep q network (DDQN) model, so I simplified the k-arm bandit problem. This gave me experience building an evironment, and I was able to see that the actor critic model may be more effective for this project’s goals. The score quickly raised for the A2C, which gave me confidence that I could use it for my own project.</p>
-                </div>
-                    <div class="img">
+                <br /><br /><br />
+                <div class="grid-cards">
+                    <div class="grid-card">    
+                    <p>This article described that they used an actor critic model (A2C), but a lot of the other literature I saw used a deep q network (DDQN) model, so I simplified the k-arm bandit problem. This gave me experience building an evironment, and I was able to see that the actor critic model may be more effective for this project’s goals. The score quickly raised for the A2C, which gave me confidence that I could use it for my own project.</p>
+                     </div>
+                    <div class=" grid-card img">
                         <img src="./badSeedImgs/agentVS.png" alt="">
                         <p>Choosing the A2C Agent</p>
                     </div>
-                </div>
-                <div class="imgSplit">
-                    <div class="leftImg img">
+                    <div class=" grid-card leftImg img">
                         <img src="./badSeedImgs/bsGamePlan.png" alt="">
                         <p>Research Plan</p>
                     </div>
-                    <div class="splitParas">
-                    <p class="splitParas">Now that I had chosen an agent, I could plan for the rest of the project. I knew that the next steps would lead me from building the agent I had just chosen and building the environment in which I could use that agent. I knew that training the agent and building the environment would take the most effort, so I planned for a lot of decisions and processes to take place before I could worry about anything else.</p>
-                </div>
-                </div>
-                <div class="imgSplit">
-                    <div class="splitParas">
-                    <p class="splitParas">The first action item in the above flowchart was to build my own A2C agent. While this took a whole week’s worth of work, I was able to do it and demonstrate that it could work on an input environment. I chose the classic cartpole paradigm, knowing that I would be building my own environment in the future. I verified that it could learn in this RL paradigm, so I was confident that I could apply it.</p>
-                </div>
-                    <div class="img">
-                        <img src="./badSeedImgs/cartpole.png" alt="">
-                        <p>Testing my A2C Agent</p>
+                    <div class="grid-card">
+                    <p class="">Now that I had chosen an agent, I could plan for the rest of the project. I knew that the next steps would lead me from building the agent I had just chosen and building the environment in which I could use that agent. I knew that training the agent and building the environment would take the most effort, so I planned for a lot of decisions and processes to take place before I could worry about anything else.</p>
                     </div>
+                    <div class="grid-card">
+                        <p class="">The first action item in the above flowchart was to build my own A2C agent. While this took a whole week’s worth of work, I was able to do it and demonstrate that it could work on an input environment. I chose the classic cartpole paradigm, knowing that I would be building my own environment in the future. I verified that it could learn in this RL paradigm, so I was confident that I could apply it.</p>
+                    </div>
+                        <div class="grid-card img">
+                            <img src="./badSeedImgs/cartpole.png" alt="">
+                            <p>Testing my A2C Agent</p>
+                        </div>
                 </div>
                 <br />
+                <br />
+                <br />
+                <div class="centered">
                 <p class="smallSection">At this point, it was time to start the meatier part of the project, the environment and training phases. Visualizing the needs of the environment was paramount to my success: it facilitated both my own understanding and my ability to talk to the users, the beamline scientists themselves.</p>
                 <p class="smallSection">For my own purposes, I wanted a more literal representation. For this reason, I turned the two dimensional array I planned to use into a spreadsheet, and I mimicked the success and failure of the agent by color. But what was this success and failure based off of? Completing 7 user interviews, I found that the abstraction that most beamline scientists use to talk about powder diffraction scattering is standard deviation. In normal statistics, standard deviation serves as a tool to say how messy the data is. Similarly, the clarity of the diffraction patterns functions in a similar way, how distributed are the rings from the mean rings. So, I used this line of thinking as my base statistic for the success of the model. Here is my first visualization in which I presented that statistic.</p>
+            </div>
                 <br />
                 <br />
                 <div class="standalonePic img">
@@ -165,46 +176,67 @@
                 </div>
                 <br />
                 <br />
-                <div class="imgSplit">
-                    <div class="splitParas">
+                <div class="grid-cards">
+                    <div class="grid-card">
                         <p>While this visualization really did help me, and it made sense to beamline scientists who work with diffraction patterns, it did not make sense to most people, so I came up with another way to explain what I was building.</p>
                         <p>In this visualization, I describe a bear (serving as the agent) picking a column in this connect-4-esque environment, and the system expressing if it was pleased or dissatisfied with the bear’s pick. For example, the bear picking the same column twice in a row was bad, but the bear picking a new column was good!</p>
                         <p>This visualization allowed me to interface with people not only beyond beamline science, but people beyond machine learning. Talking about my idea with so many disciplines got me thinking about how reward systems work not only in reinforcement learning, but in people.</p>
                     </div>
-                    <div class="img">
+                    <div class=" grid-card img">
                         <img src="./badSeedImgs/bears.png" alt="">
                         <p>Describing the Agent</p>
                     </div>
                 </div>
                 <br />
                 <br />
+                <br />
+                <div class="centered">
                 <p class="smallSection">With my experience in cognitive science and psychology, I knew that I could start looking into the ways that we are motivated to continue a behavior. I found that two of the major contributing factors were if the rewards were graded and the schedule at which the rewards were received. Being graded refers to that the more desireable the behavior, the better the reward; conversely, leveled rewards reap the same rewards regardless of the degree of desireability.</p>
                 <p class="smallSection">In psychology, the research on these two reward oriented factors indicate that while graded rewards cause faster learning, they also cause the behavior to level off more quickly than that of a leveled reward system. Variable ration reward systems also cause faster learning, but the desired behavior tends to be more sustainable than a fixed ratio reward system. I also looked at concurrent schedules, or multitasking, but this seemed to clearly show that we are not good at handling multiple schedules.</p>
+            </div>
+                <br />
+                <br />
+                <br />
                 <div class="bigImg">
                     <div class="twoCenters">
                     <img style="margin-right: 10%;" src="./badSeedImgs/graded.png" alt="">
-                    <img id="weirdGraph" src="./badSeedImgs/ratio.png" alt="">
+                    <img src="./badSeedImgs/ratio.png" alt="">
                 </div>
                     <p>Psychological Principles I could Test</p>
                 </div>
                 <br />
                 <br />
                 <br />
-                <p class="smallSection">Talking about the problem helped me to visualize what I was doing, but through analysis and planning, I came up with two main goals my system would have to acheive.</p>
-                <div class="callout">
+                <div class="centered">
+                     <p class="smallSection">Talking about the problem helped me to visualize what I was doing, but through analysis and planning, I came up with two main goals my system would have to acheive.</p>
+                </div>
+                     <div class="callout">
                     <h2>1. Get the agent to choose the sample with the highest standard deviation</h2>
                     <h2>2. Get the agent to discover all of the bad seeds, not just one</h2>
                 </div>
+                <div class="centered">
                 <p class="smallSection">If both of these goals could be realized, my system would be able to acheive the overall goal of lowering the time it takes to measure all of the samples to the extent that they are clear enough for beamline scientists to use.</p>
+                <br />
+                <br />
+                <br />
                 <h3>The Solution</h3>
-                <div class="imgSplit">
-                    <p class="splitParas">While I did have two major rounds of success, I had a lot of failures. Building and training this model probably had more failures than I thought I would ever see in my entire life. I had a lot of graphs that looked like this, a lot of hours of work that amounted to nothing, but I kept going.</p>
+                <br />
+            </div>
+                <div class="grid-cards">
+                    <div class="grid-card">
+                    <p class="">While I did have two major rounds of success, I had a lot of failures. Building and training this model probably had more failures than I thought I would ever see in my entire life. I had a lot of graphs that looked like this, a lot of hours of work that amounted to nothing, but I kept going.</p>
+                </div>
                     <div class="img">
                         <img src="./badSeedImgs/fail.png" alt="">
                         <p>Failed attempt to Isolate SD</p>
                     </div>
                 </div>
+                <br />
+                <br />
+                <br />
+                <div class="centered">
                 <p class="smallSection">My first real round of success was that I separately acheieved my two goals that I listed in my process. Below, I have evidence that these goals were acheived, but I did not yet know that I would be able to combine them into one system that succeeded in both goals in one environment.</p>
+            </div>
                 <div class="goalAcheivements">
                     <div class="imbalanced img">
                         <img src="./badSeedImgs/goal1.png" alt="" class="">
@@ -223,22 +255,25 @@
                 </div>
                 <br />
                 <br />
-                <div class="imgSplit">
-                    <div class="splitParas">
+                <div class="grid-cards">
+                    <div class="grid-card">
                 <p>In order to combine the two goals into one system, I based my reward systems off of what I gathered from my psychology research. Not only did this strategy allow my to combine my goals to satisfy both of their needs, I saw a pattern that mimicked that of human reward systems.</p>
                 <p>Similar to the human data, variable ratios meant faster learning, the graded rewards meant initiallly fast learning with leveling off, and the concurrent schedules did not have very much growth at all.</p>
                 <p>Because of this similarity and a statistical analysis, it became obvious that the best reward schedule was the one that employed a variable ratio with a leveled reward.</p>
             </div>
-                <div class="img">
+                <div class="grid-card img">
                     <img src="./badSeedImgs/rewards.png" alt="">
                     <br />
                     <br />
                     <img src="./badSeedImgs/loss.png" alt="">
                 </div>
                 </div>
+                <br />
+                <br />
+                <br />
                 <p>But now, it was time for the final test...</p>
                 <h2 class="callout">Could the system determine which samples should be remeasured?</h2>
-                <div class="imgSplit"><div class="splitParas">
+                <div class="grid-cards"><div class="grid-card">
                 <p>In order to test this ultimate question, I ran a sample set of ten, in which I included three bad samples, three bad seeds.  I first ran the original system on the sample set, measuring each of the ten samples one hundred times, meaning a total of one thousand measurements. From this process, I knew that the bad seeds were samples 0, 2, and 8. I then ran my autonomous system, which measured only a total of one hundred, and it was able to identify the same bad seeds in one tenth of the time!</p>
                 </div>
                 <div class="img">
@@ -254,24 +289,33 @@
                     </div>
                 </div>
                  </div>
-                <div class="">
+                 <br />
+                 <br />
+                 <br />
+                <div class="centered">
                     <p class="smallSection">This was a huge success for me and for Brookhaven National Lab. Because of this system, beamline scientists now spend less time looking at every individual diffraction pattern, and they can focus on their more pressing duties, namely their research. In my case, I was lucky enough to be included in that research surrounding this project. This gamification of the beamline has become its own research avenue at the lab because of my success. My work is featured in this article: <a href="https://iopscience.iop.org/article/10.1088/2632-2153/abc9fc/pdf"> Gaming the Beamlines</a></p>
-                    <div class="imbalanced" style="margin-bottom: 30px;">
-                        <div class="img">
-                        <img src="./badSeedImgs/interface.png" alt="">
-                        <p>User Interface For BadSeed Users</p>
-                    </div>
+                </div>
+                    <div class="grid-cards">
+                        <div class="grid-card img">
+                            <img src="./badSeedImgs/interface.png" alt="">
+                            <p>User Interface For BadSeed Users</p>
+                        </div>
+                        <div class="grid-card">
+                            <p>I would love to continue this project by continuing the interface I began to build. This interface would allow beamline scientists to be better aware of the autonomous system and give them a more explainable AI.</p>
+                        </div>
+                        </div>
                     <br />
                     <br />
-                    <div class="splitParas">
-                        <p style="margin-left: 5%;">I would love to continue this project by continuing the interface I began to build. This interface would allow beamline scientists to be better aware of the autonomous system and give them a more explainable AI.</p>
-                    </div>
-                    </div>
+                    <br />
+                    <div class="centered">
                     <p class="smallSection" style="margin-bottom: 50px;">This project was an amazing learning opportunity for me. It is truly what began my journey to realizing that research and development can and should be integrated. I learned about RL as well as how to include humans in the process. I am so grateful for my time on this project, and I am excited to see more work that comes from it.</p>
                 </div>
+                </div>
             </div>
+            <div class="navButtons">
             <a href="bubbles.html" class="next">Go to Bubbles Project &#8594;</a>
-      </div>
+        </div>
+        </div>
       
         
 <script src="main.js"></script>

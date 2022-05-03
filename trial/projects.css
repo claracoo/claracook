@@ -9,6 +9,10 @@
      width: 100%;
  }
 
+ .projHeader {
+     max-width: 500px;
+ }
+
  .vertProjImg {
      display: none;
  }

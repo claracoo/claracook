@@ -110,6 +110,11 @@ small {
     padding: 0px;
     width: 50%;
 }
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .insightsImg {
     width: 50%;
@@ -124,7 +129,7 @@ small {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 5%;
+    /* margin-right: 5%; */
 }
 
 .stacked {
@@ -174,7 +179,7 @@ small {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 75px;
 }
 
 .goalAcheivements {
@@ -251,10 +256,37 @@ small {
     justify-content: center;
 }
 
+.grid-cards {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-items: center;
+}
+
+.grid-card {
+    padding: 1rem;
+}
+
+.rings {
+    display: flex;
+}
+
+@media only screen and (max-width: 1520px) {
+    .grid-cards {
+        max-width: 1200px;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
 
 @media only screen and (max-width: 1325px){
     .projLinks {
        width: 60%;
+    }
+    .grid-cards {
+        max-width: 800px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
   }
 @media only screen and (max-width: 1130px){
@@ -336,6 +368,16 @@ small {
         padding: 0px;
         width: 100%;
     }
+    .grid-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  @media only screen and (max-width: 1130px){
+    .smallSection {
+        padding: 0px;
+        width: 100%;
+    }
   }
   
 @media only screen and (max-width: 550px){
@@ -359,6 +401,10 @@ small {
      .standalonePic img {
         padding: 10px;
      }
+
+     .grid-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
   }
 
 @media only screen and (max-width: 450px){
@@ -369,4 +415,8 @@ small {
      .projHeader {
          align-items: center;
      }
+
+     .grid-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
   }
